@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click me</button>
+    <script>
+      //   let arr = ["a", "b", "c", "d", "e", "f", "g", "h"];
+      //   let btn = document.querySelector("button");
+      //   let list = document.querySelector("ul");
+      //   count = 0;
+      //   function addlistitems() {
+      //     if (count >= arr.length) {
+      //       btn.removeEventListener("click", addlistitems);
+      //       return; // we can also apply else
+      //     }
+      //     let li = document.createElement("li");
+      //     li.innerText = arr[count];
+      //     list.appendChild(li);
+      //     count++;
+      //   }
+      //   btn.addEventListener("click", addlistitems);
+      let btn = document.querySelector("button");
+
+      function eventhandler(event) {
+        console.log(event);
+      }
+
+      btn.addEventListener("click", eventhandler);
+    </script>
+  </body>
+</html>

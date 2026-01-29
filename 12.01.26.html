@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading" class="headingclass"></h1>
+    <p id="paragraph"></p>
+    <div id="div"></div>
+    <h2 id="head2"></h2>
+    <div id="head3">
+        hello
+        <span style="display:none">world</span>
+    </div>
+    <script>
+        // let heading = document.getElementById("heading")
+        // let heading = document.getElementsByClassName("headingclass")
+        // let heading = document.querySelector('#heading')
+        // let heading = document.querySelector('.headingclass')
+        // let heading = document.querySelector('h1')
+        // let heading = document.querySelectorAll('h1')
+        let heading = document.getElementById('heading')
+        heading.style.color = "red";
+        heading.innerText = "hello students";
+        console.log(heading.innerText)
+        let paragraph=document.getElementById("paragraph")
+        paragraph.innerText = "this is a paragraph";
+        paragraph.style.color="blue";
+        console.log(paragraph.innerText)
+        let div=document.getElementById("div")
+        div.innerText="this is a div";
+        div.style.color="brown";
+        console.log(div.innerText)
+        div.innerHTML = `<h1> hello div tag </h1>
+                         <p> this is a para</p>`
+        let head2 = document.getElementById("head2");
+        // head2.innerText = "hello head2"
+        // head2.innerText = `hello 
+        
+        // head2`
+        // head2.textContent = `hello 
+        
+        // head2`
+
+    </script>
+</body>
+</html>

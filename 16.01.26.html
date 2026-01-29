@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+    <button>add list item</button>
+
+    <script>
+      //   let btn = document.querySelector("button");
+
+      //   function print() {
+      //     console.log("button clicked");
+      //     alert("button clicked");
+      //   }
+
+      //   btn.addEventListener("click", print);
+
+      //   let list = document.querySelector("ul");
+      //   let btn = document.querySelector("button");
+      //   count = 1;
+
+      //   function addlistitems() {
+      //     let li = document.createElement("li");
+      //     li.innerText = `list items ` + count;
+      //     list.appendChild(li);
+      //     count++;
+      //   }
+
+      //   btn.addEventListener("click", addlistitems);
+
+      let arr = ["a", "b", "c", "d", "e", "f", "g", "h"];
+      let btn = document.querySelector("button");
+      let list = document.querySelector("ul");
+      count = 0;
+      function addlistitems() {
+        if (count < arr.length) {
+          let li = document.createElement("li");
+          li.innerText = arr[count];
+          list.appendChild(li);
+          count++;
+        }
+      }
+      btn.addEventListener("click", addlistitems);
+    </script>
+  </body>
+</html>

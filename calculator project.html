@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #container {
+        background-color: aquamarine;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        width: 400px;
+        box-shadow: 2px 2px 4px 4px;
+      }
+      input {
+        padding: 10px;
+        font-size: 2rem;
+        border: none;
+        outline: 0.5px solid blue;
+        margin-bottom: 1rem;
+      }
+      #btncontainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      #btncontainer > * {
+        height: 80px;
+        width: 50px;
+        border-radius: 15px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <input type="text" disabled />
+      <div id="btncontainer">
+        <button>AC</button>
+        <button>DLT</button>
+        <button>/</button>
+        <button>*</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>-</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>+</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>%</button>
+        <button>00</button>
+        <button>0</button>
+        <button>.</button>
+        <button>=</button>
+      </div>
+    </div>
+
+    <script>
+      let arrButtons = [
+        "AC",
+        "DLT",
+        "/",
+        "*",
+        "7",
+        "8",
+        "9",
+        "-",
+        "4",
+        "5",
+        "6",
+        "+",
+        "1",
+        "2",
+        "3",
+        "%",
+        "00",
+        "0",
+        ".",
+        "=",
+      ];
+      let inp = document.querySelector("input");
+      let btn = document.querySelector("#btncontainer");
+
+      function calc(event) {
+        if (arrButtons.includes(event.target.innerText)) {
+          if (event.target.innerText === "=") {
+            inp.value = eval(inp.value);
+            return;
+          }
+          if (event.target.innerText === "AC") {
+            inp.value = "";
+            return;
+          }
+          if (event.target.innerText === "DLT") {
+            inp.value = inp.value.slice(0, inp.value.length - 1);
+            return;
+          }
+
+          inp.value = inp.value + event.target.innerText;
+        }
+      }
+
+      btn.addEventListener("click", calc);
+    </script>
+  </body>
+</html>
